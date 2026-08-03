@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Digital | Conexão Segura</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | Conexão Segura</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Conexão Segura</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="escuta.html">Portal de Escuta</a></li>
-                <li><a href="quiz.html" class="active">Quiz Digital</a></li>
-                <li><a href="referencias.html">Referências</a></li>
-            </ul>
-        </nav>
-        <div class="acessibilidade">
-            <button id="btn-contraste" title="Alto Contraste"><i class="fa-solid fa-circle-half-stroke"></i></button>
-            <button id="btn-fonte" title="Aumentar Fonte"><i class="fa-solid fa-font"></i>+</button>
-        </div>
-    </header>
+<nav>
+  <div class="container nav-content">
+    <div class="logo">Conexão<span>Segura</span></div>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="escuta.html">Escuta</a></li>
+      <li><a href="referências.html">Referências</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <main>
-        <section id="quiz" class="secao-quiz">
-            <h2><i class="fa-solid fa-gamepad"></i> Quiz: Você está seguro na rede?</h2>
-            <p class="subtitulo">Teste seus conhecimentos sobre cyberbullying e segurança digital!</p>
-            
-            <div id="container-quiz" class="card">
-                <div id="pergunta-box"></div>
-                <div id="alternativas-box"></div>
-                <button id="btn-proximo" class="btn-principal oculto">Próxima Pergunta</button>
-            </div>
-            
-            <div id="resultado-quiz" class="card oculto">
-                <h3>Resultado do Quiz</h3>
-                <p id="placar"></p>
-                <button id="btn-reiniciar" class="btn-principal">Tentar Novamente</button>
-            </div>
-        </section>
-    </main>
+<section class="section">
+  <div class="container">
+    <div class="quiz-box">
+      <h2>Você sabe identificar o cyberbullying?</h2>
+      <p>Marque a alternativa correta.</p>
 
-    <footer>
-        <p>&copy; 2026 - Portal Conexão Segura. Criado com fins educativos.</p>
-    </footer>
+      <form id="quizForm">
+        <h3>1. Compartilhar uma foto de alguém sem permissão pode ser cyberbullying?</h3>
+        <label><input type="radio" name="q1" value="certo"> Sim</label>
+        <label><input type="radio" name="q1" value="errado"> Não</label>
 
-    <button id="btn-topo" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+        <h3>2. Curtir comentários ofensivos ajuda a diminuir o problema?</h3>
+        <label><input type="radio" name="q2" value="errado"> Sim</label>
+        <label><input type="radio" name="q2" value="certo"> Não</label>
 
-    <script src="script.js"></script>
+        <h3>3. O que é mais adequado fazer ao ver uma agressão online?</h3>
+        <label><input type="radio" name="q3" value="errado"> Compartilhar</label>
+        <label><input type="radio" name="q3" value="certo"> Apoiar e denunciar</label>
+
+        <button type="submit">Ver resultado</button>
+      </form>
+
+      <div id="resultado" class="resultado"></div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

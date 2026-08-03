@@ -1,114 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexão Segura | Portal de Apoio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conexão Segura | Combate ao Cyberbullying</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Conexão Segura</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#escuta">Portal de Escuta</a></li>
-                <li><a href="#quiz">Quiz Digital</a></li>
-                <li><a href="#referencias">Referências</a></li>
-            </ul>
-        </nav>
-        <div class="acessibilidade">
-            <button id="btn-contraste" title="Alto Contraste"><i class="fa-solid fa-circle-half-stroke"></i></button>
-            <button id="btn-fonte" title="Aumentar Fonte"><i class="fa-solid fa-font"></i>+</button>
+<nav>
+  <div class="container nav-content">
+    <div class="logo">Conexão<span>Segura</span></div>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="escuta.html">Escuta</a></li>
+      <li><a href="referências.html">Referências</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Internet sem medo, respeito em cada mensagem.</h1>
+    <p>
+      O cyberbullying pode acontecer em jogos, redes sociais, grupos e mensagens.
+      Nosso objetivo é conscientizar, prevenir e ajudar quem sofre esse tipo de violência digital.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="quiz.html" class="btn btn-primary">Fazer o Quiz</a>
+      <a href="escuta.html" class="btn btn-secondary">Buscar Apoio</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <h3>+1 bi</h3>
+        <p>jovens conectados</p>
+      </div>
+      <div class="stat">
+        <h3>24h</h3>
+        <p>impacto emocional</p>
+      </div>
+      <div class="stat">
+        <h3>100%</h3>
+        <p>respeito importa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Como identificar o cyberbullying?</h2>
+      <p>Nem toda brincadeira é inofensiva. Alguns sinais merecem atenção.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Ofensas repetidas</h3>
+        <p>Mensagens agressivas, apelidos humilhantes e ataques constantes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Exposição pública</h3>
+        <p>Compartilhar fotos, vídeos ou conversas sem autorização.</p>
+      </div>
+
+      <div class="card">
+        <h3>Exclusão digital</h3>
+        <p>Retirar alguém de grupos ou combinar humilhações online.</p>
+      </div>
+
+      <div class="card">
+        <h3>Perfis falsos</h3>
+        <p>Usar contas fake para intimidar, ameaçar ou espalhar boatos.</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <h2>O que fazer ao presenciar um caso?</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h4>Não participe</h4>
+            <p>Evite curtir, compartilhar ou incentivar as agressões.</p>
+          </div>
         </div>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Portal de Apoio ao Estudante</h1>
-            <p class="boas-vindas">"Bem-vindo ao Portal de Apoio ao Estudante. Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente digital e escolar."</p>
-            <p>A internet é um espaço incrível para aprender e se conectar, mas deve ser sempre um lugar de respeito. Se algo na rede está te fazendo mal, você não está sozinho.</p>
-            <a href="#escuta" class="btn-principal">Preciso de Apoio</a>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h4>Apoie a vítima</h4>
+            <p>Uma mensagem de apoio pode fazer muita diferença.</p>
+          </div>
         </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Ilustração de segurança digital e conexão segura">
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h4>Guarde provas</h4>
+            <p>Tire prints e registre as mensagens ou publicações.</p>
+          </div>
         </div>
-    </section>
 
-    <section id="escuta" class="secao-escuta">
-        <h2><i class="fa-solid fa-heart-pulse"></i> Portal de Escuta</h2>
-        <p class="subtitulo">Este é um espaço seguro e anônimo para você desabafar. Nada do que você escrever aqui será guardado ou exposto.</p>
-        
-        <div class="container-escuta">
-            <form id="form-escuta" class="card">
-                <label for="desabafo">O que está na sua mente hoje?</label>
-                <textarea id="desabafo" rows="5" placeholder="Escreva aqui o que você está sentindo ou passando..." required></textarea>
-                <button type="submit" class="btn-enviar">Enviar Desabafo</button>
-            </form>
-
-            <div id="mensagem-acolhimento" class="card oculto">
-                <h3>Obrigado por compartilhar conosco! 🤍</h3>
-                <p id="frase-motivacional"></p>
-                <div class="orientacoes">
-                    <h4>🚨 Lembre-se, você não está sozinho:</h4>
-                    <ul>
-                        <li>Procure um <strong>professor ou pedagogo</strong> de sua confiança na escola.</li>
-                        <li>Converse com a <strong>direção</strong> ou com seus <strong>familiares</strong>.</li>
-                        <li>Para ajuda especializada em segurança digital, acesse a <strong>SaferNet Brasil</strong>.</li>
-                        <li>Se precisar conversar com alguém agora, ligue para o <strong>CVV (141)</strong>.</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div>
+            <h4>Denuncie</h4>
+            <p>Use as ferramentas da plataforma e procure um adulto ou responsável.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="quiz" class="secao-quiz">
-        <h2><i class="fa-solid fa-gamepad"></i> Quiz: Você está seguro na rede?</h2>
-        <p class="subtitulo">Teste seus conhecimentos sobre cyberbullying e segurança digital!</p>
-        
-        <div id="container-quiz" class="card">
-            <div id="pergunta-box"></div>
-            <div id="alternativas-box"></div>
-            <button id="btn-proximo" class="btn-principal oculto">Próxima</button>
-        </div>
-        
-        <div id="resultado-quiz" class="card oculto">
-            <h3>Resultado do Quiz</h3>
-            <p id="placar"></p>
-            <button id="btn-reiniciar" class="btn-principal">Tentar Novamente</button>
-        </div>
-    </section>
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Pequenas atitudes, grande impacto</h2>
+      <p>Uma comunidade saudável começa com cada usuário.</p>
+    </div>
 
-    <section id="referencias" class="secao-referencias">
-        <h2><i class="fa-solid fa-book"></i> Referências e Fontes Confiáveis</h2>
-        <p>Todo o conteúdo deste portal é baseado em instituições sérias de proteção e educação digital:</p>
-        <div class="links-referencias">
-            <a href="https://new.safernet.org.br/" target="_blank" class="card-ref">
-                <i class="fa-solid fa-globe"></i>
-                <strong>SaferNet Brasil</strong>
-                <p>Referência nacional em segurança na internet e combate a crimes cibernéticos.</p>
-            </a>
-            <a href="https://www.gov.br/mdh/pt-br" target="_blank" class="card-ref">
-                <i class="fa-solid fa-building-columns"></i>
-                <strong>Ministério dos Direitos Humanos</strong>
-                <p>Guias governamentais e cartilhas de combate ao bullying escolar.</p>
-            </a>
-            <a href="https://www.unicef.org/brazil/cyberbullying-o-que-eh-e-como-parar" target="_blank" class="card-ref">
-                <i class="fa-solid fa-child"></i>
-                <strong>UNICEF Brasil</strong>
-                <p>Manual prático para jovens sobre como identificar e parar o cyberbullying.</p>
-            </a>
-        </div>
-    </section>
+    <div class="grid">
+      <div class="card">
+        <h3>Pense antes de enviar</h3>
+        <p>Se a mensagem machucaria alguém pessoalmente, provavelmente também machuca online.</p>
+      </div>
 
-    <footer>
-        <p>&copy; 2026 - Portal Conexão Segura. Criado com fins educativos.</p>
-    </footer>
+      <div class="card">
+        <h3>Respeite as diferenças</h3>
+        <p>Cada pessoa possui aparência, opiniões e experiências diferentes.</p>
+      </div>
 
-    <button id="btn-topo" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+      <div class="card">
+        <h3>Converse</h3>
+        <p>Quando houver conflito, o diálogo é mais forte que a humilhação pública.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<footer>
+  <div class="container">
+    <p>Projeto de conscientização sobre cyberbullying • Desenvolvido por Reon no VS Code 😎</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
-</html>  
+</html>
