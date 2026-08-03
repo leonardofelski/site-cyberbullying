@@ -1,0 +1,204 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (DESIGN SYSTEM)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-fundo: #f8fafc;
+    --cor-fundo-alternativo: #ffffff;
+    --cor-primaria: #1e293b;
+    --cor-secundaria: #475569;
+    --cor-destaque: #4f46e5;
+    --cor-destaque-hover: #4338ca;
+    --cor-destaque-suave: #e0e7ff;
+    --cor-borda: #e2e8f0;
+    --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --sombra-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --transicao: all 0.3s ease;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGAÇÃO (HEADER)
+   ========================================================================== */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.25rem 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transicao);
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Linha decorativa por baixo dos links ao passar o rato */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--cor-destaque);
+    transition: var(--transicao);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   3. ESTRUTURA E LAYOUT DAS SEÇÕES
+   ========================================================================== */
+section {
+    padding: 8rem 8% 6rem 8%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Alternância de cores de fundo para dar ritmo visual */
+section:nth-child(even) {
+    background-color: var(--cor-fundo-alternativo);
+}
+
+.conteudo-secao {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+h2 + p {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   4. COMPONENTES: BOTÕES E ELEMENTOS INTERATIVOS
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transicao);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.15);
+}
+
+.btn:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.25);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   5. SEÇÃO 1: INÍCIO (HERO SECTION)
+   ========================================================================== */
+#inicio {
+    background: radial-gradient(circle at top right, #f4f5ff 0%, var(--cor-fundo) 60%);
+    text-align: center;
+}
+
+#inicio h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1.5px;
+}
+
+#inicio p {
+    font-size: 1.25rem;
+    max-width: 650px;
+    margin: 0 auto 2.5rem auto;
+    color: var(--cor-secundaria);
+}
+
+/* ==========================================================================
+   6. SEÇÃO 2: GRID DE CARDS (O QUE É)
+   ========================================================================== */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--cor-fundo-alternativo);
+    padding: 2.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-card);
+    border-color: rgba(79, 70,

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidos Contra o Cyberbullying</title>
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS & CORES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --cor-fundo: #f8f9fa;
+            --cor-primaria: #4a5568;
+            --cor-destaque: #6366f1;
+            --cor-destaque-hover: #4f46e5;
+            --cor-texto: #2d3748;
+            --cor-card: #ffffff;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        /* --- BARRA DE NAVEGAÇÃO (HEADER) --- */
+        header {
+            background-color: var(--cor-card);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-primaria);
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* --- ESTRUTURA DAS SEÇÕES --- */
+        section {
+            padding: 8rem 5% 4rem 5%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .conteudo-secao {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--cor-primaria);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--cor-destaque);
+            margin-top: 0.5rem;
+            border-radius: 2px;
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--cor-destaque);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--cor-destaque-hover);
+            transform: translateY(-2px);
+        }
+
+        /* --- HOME / INÍCIO --- */
+        #inicio {
+            background: linear-gradient(135deg, #e0e7ff 0%, #f8f9fa 100%);
+            text-align: center;
+        }
+
+        #inicio h1 {
+            font-size: 3.5rem;
+            color: var(--cor-texto);
+            margin-bottom: 1rem;
+        }
+
+        #inicio p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            color: var(--cor-primaria);
+        }
+
+        /* --- CONTEXTO / O QUE É (GRID DE CARDS) --- */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 15fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--cor-card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--cor-destaque);
+            margin-bottom: 1rem;
+        }
+
+        /* --- COMO COMBATER (LISTAS LIMPAS) --- */
+        .lista-acoes {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .lista-acoes li {
+            background: var(--cor-card);
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--cor-destaque);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+        }
+
+        /* --- AJUDA / CONTATO --- */
+        .secao-ajuda {
+            background-color: #eef2ff;
+            text-align: center;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 2rem;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: var(--cor-primaria);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">InternetSegura_</div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">O que é</a>
+            <a href="#combate">Como Combater</a>
+            <a href="#ajuda">Buscar Ajuda</a>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="conteudo-secao">
+            <h1>A internet deve ser um lugar seguro.</h1>
+            <p>O cyberbullying afeta milhares de jovens todos os dias. Conheça seus direitos, saiba como se proteger e faça parte da mudança.</p>
+            <a href="#sobre" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="conteudo-secao">
+            <h2>O que é Cyberbullying?</h2>
+            <p>É a prática de humilhar, perseguir, ameaçar ou chantagear uma pessoa no ambiente virtual. Acontece em redes sociais, aplicativos de mensagens e jogos online.</p>
+            
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Exclusão</h3>
+                    <p>Isolar a vítima de grupos online, fóruns ou jogos propositalmente para causar sofrimento emocional.</p>
+                </div>
+                <div class="card">
+                    <h3>Assédio</h3>
+                    <p>Envio constante de mensagens ofensivas, insultos ou ameaças diretamente para a pessoa.</p>
+                </div>
+                <div class="card">
+                    <h3>Exposição</h3>
+                    <p>Espalhar boatos, segredos, fotos ou vídeos íntimos e privados sem o consentimento da vítima.</p>
+                </div>
+            </div>
+            
+            <center style="margin-top: 2rem;">
+                <a href="#combate" class="btn">Como posso combater?</a>
+            </center>
+        </div>
+    </section>
+
+    <section id="combate">
+        <div class="conteudo-secao">
+            <h2>Como Combater essa Prática</h2>
+            <p>Seja você a vítima ou uma testemunha, existem atitudes práticas que quebram o ciclo da violência virtual:</p>
+            
+            <ul class="lista-acoes">
+                <li><strong>Não responda aos ataques:</strong> Os agressores buscam reações. Manter a calma é o primeiro passo.</li>
+                <li><strong>Junte evidências:</strong> Tire prints (capturas de tela) de todas as ofensas, links de perfis e datas.</li>
+                <li><strong>Bloqueie e denuncie:</strong> Use as ferramentas das próprias redes sociais para bloquear o agressor e denunciar a conta.</li>
+                <li><strong>Fale com um adulto:</strong> Conte para seus pais, responsáveis ou professores o que está acontecendo.</li>
+            </ul>
+
+            <a href="#ajuda" class="btn">Preciso de ajuda agora</a>
+        </div>
+    </section>
+
+    <section id="ajuda">
+        <div class="conteudo-secao">
+            <h2>Canais de Apoio</h2>
+            <p>Você não está sozinho nessa batalha. Existem instituições prontas para te ouvir e ajudar legalmente.</p>
+            
+            <div class="secao-ajuda">
+                <h3>Central SaferNet Brasil</h3>
+                <p>Oferece orientação anônima e gratuita para combater crimes e violações dos direitos humanos na internet.</p>
+                <a href="https://new.safernet.org.br/" target="_blank" class="btn">Visitar SaferNet</a>
+            </div>
+
+            <div class="secao-ajuda" style="margin-top: 1.5rem; background-color: #f1f5f9;">
+                <h3>Ligue 100</h3>
+                <p>O Disque Direitos Humanos recebe denúncias de violência virtual contra crianças e adolescentes 24 horas por dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Projeto Internet Segura. Desenvolvido no VS Code para um mundo digital melhor.</p>
+    </footer>
+
+</body>
+</html>
