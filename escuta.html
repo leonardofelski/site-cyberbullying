@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Escuta | Conexão Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Conexão Segura</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="escuta.html" class="active">Portal de Escuta</a></li>
+                <li><a href="quiz.html">Quiz Digital</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+            </ul>
+        </nav>
+        <div class="acessibilidade">
+            <button id="btn-contraste" title="Alto Contraste"><i class="fa-solid fa-circle-half-stroke"></i></button>
+            <button id="btn-fonte" title="Aumentar Fonte"><i class="fa-solid fa-font"></i>+</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="escuta" class="secao-escuta">
+            <h2><i class="fa-solid fa-heart-pulse"></i> Portal de Escuta</h2>
+            <p class="subtitulo">Este é um espaço seguro e anônimo para você desabafar. Nada do que você escrever aqui será guardado ou exposto.</p>
+            
+            <div class="container-escuta">
+                <form id="form-escuta" class="card">
+                    <label for="desabafo">O que está na sua mente hoje?</label>
+                    <textarea id="desabafo" rows="6" placeholder="Escreva aqui o que você está sentindo ou passando..." required></textarea>
+                    <button type="submit" class="btn-enviar">Enviar Desabafo</button>
+                </form>
+
+                <div id="mensagem-acolhimento" class="card oculto">
+                    <h3>Obrigado por compartilhar conosco! 🤍</h3>
+                    <p id="frase-motivacional"></p>
+                    <div class="orientacoes">
+                        <h4>🚨 Lembre-se, você não está sozinho:</h4>
+                        <ul>
+                            <li>Procure um <strong>professor ou pedagogo</strong> de sua confiança na escola.</li>
+                            <li>Converse com a <strong>direção</strong> ou com seus <strong>familiares</strong>.</li>
+                            <li>Para ajuda especializada em segurança digital, acesse a <strong>SaferNet Brasil</strong>.</li>
+                            <li>Se precisar conversar com alguém agora, ligue para o <strong>CVV (141)</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Portal Conexão Segura. Criado com fins educativos.</p>
+    </footer>
+
+    <button id="btn-topo" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>

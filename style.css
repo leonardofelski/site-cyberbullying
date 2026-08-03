@@ -1,204 +1,334 @@
-/* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (DESIGN SYSTEM)
-   ========================================================================== */
+/* Configurações Gerais e Variáveis */
+:root {
+    --bg-principal: #f4f7fc;
+    --bg-card: #ffffff;
+    --texto: #2d3748;
+    --primaria: #4f46e5;
+    --secundaria: #06b6d4;
+    --sucesso: #10b981;
+    --transicao: all 0.3s ease;
+}
+
+/* Modo Alto Contraste */
+.alto-contraste {
+    --bg-principal: #000000;
+    --bg-card: #121212;
+    --texto: #ffffff;
+    --primaria: #ffff00;
+    --secundaria: #00ffff;
+    --sucesso: #00ff00;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --cor-fundo: #f8fafc;
-    --cor-fundo-alternativo: #ffffff;
-    --cor-primaria: #1e293b;
-    --cor-secundaria: #475569;
-    --cor-destaque: #4f46e5;
-    --cor-destaque-hover: #4338ca;
-    --cor-destaque-suave: #e0e7ff;
-    --cor-borda: #e2e8f0;
-    --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    --sombra-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-    --transicao: all 0.3s ease;
-}
-
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-primaria);
-    line-height: 1.7;
-    overflow-x: hidden;
+    background-color: var(--bg-principal);
+    color: var(--texto);
+    transition: var(--transicao);
+    line-height: 1.6;
 }
 
-/* ==========================================================================
-   2. BARRA DE NAVEGAÇÃO (HEADER)
-   ========================================================================== */
-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1.25rem 8%;
+/* Menu de Navegação */
+.navbar {
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    background: var(--bg-card);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--cor-borda);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--cor-destaque);
-    letter-spacing: -0.5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primaria);
 }
 
-nav {
+.navbar nav ul {
     display: flex;
+    list-style: none;
     gap: 2rem;
 }
 
-nav a {
+.navbar nav a {
     text-decoration: none;
-    color: var(--cor-secundaria);
+    color: var(--texto);
     font-weight: 500;
-    font-size: 0.95rem;
-    transition: var(--transicao);
-    position: relative;
-}
-
-nav a:hover {
-    color: var(--cor-destaque);
-}
-
-/* Linha decorativa por baixo dos links ao passar o rato */
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--cor-destaque);
     transition: var(--transicao);
 }
 
-nav a:hover::after {
-    width: 100%;
+.navbar nav a:hover {
+    color: var(--primaria);
 }
 
-/* ==========================================================================
-   3. ESTRUTURA E LAYOUT DAS SEÇÕES
-   ========================================================================== */
-section {
-    padding: 8rem 8% 6rem 8%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Alternância de cores de fundo para dar ritmo visual */
-section:nth-child(even) {
-    background-color: var(--cor-fundo-alternativo);
-}
-
-.conteudo-secao {
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--cor-primaria);
-    margin-bottom: 1rem;
-    letter-spacing: -0.5px;
-}
-
-h2 + p {
-    font-size: 1.1rem;
-    color: var(--cor-secundaria);
-    max-width: 700px;
-    margin-bottom: 3rem;
-}
-
-/* ==========================================================================
-   4. COMPONENTES: BOTÕES E ELEMENTOS INTERATIVOS
-   ========================================================================== */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    background-color: var(--cor-destaque);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: var(--transicao);
-    border: none;
+.acessibilidade button {
+    background: none;
+    border: 1px solid var(--primaria);
+    color: var(--primaria);
+    padding: 0.3rem 0.6rem;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.15);
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    transition: var(--transicao);
 }
 
-.btn:hover {
-    background-color: var(--cor-destaque-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.25);
+.acessibilidade button:hover {
+    background: var(--primaria);
+    color: #fff;
 }
 
-.btn:active {
-    transform: translateY(0);
-}
-
-/* ==========================================================================
-   5. SEÇÃO 1: INÍCIO (HERO SECTION)
-   ========================================================================== */
-#inicio {
-    background: radial-gradient(circle at top right, #f4f5ff 0%, var(--cor-fundo) 60%);
-    text-align: center;
-}
-
-#inicio h1 {
-    font-size: 3.8rem;
-    font-weight: 800;
-    color: var(--cor-primaria);
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1.5px;
-}
-
-#inicio p {
-    font-size: 1.25rem;
-    max-width: 650px;
-    margin: 0 auto 2.5rem auto;
-    color: var(--cor-secundaria);
-}
-
-/* ==========================================================================
-   6. SEÇÃO 2: GRID DE CARDS (O QUE É)
-   ========================================================================== */
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
+/* Configuração Geral de Seções */
+section {
+    padding: 100px 8% 60px 8%;
+    min-height: 80vh;
 }
 
 .card {
-    background-color: var(--cor-fundo-alternativo);
+    background: var(--bg-card);
     padding: 2.5rem;
-    border-radius: 14px;
-    border: 1px solid var(--cor-borda);
-    box-shadow: var(--sombra-suave);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-top: 2rem;
     transition: var(--transicao);
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sombra-card);
-    border-color: rgba(79, 70,
+h2 {
+    font-size: 2.2rem;
+    color: var(--primaria);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 2rem;
+}
+
+/* Seção Home */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f4f7fc 100%);
+}
+
+.alto-contraste .hero {
+    background: #000;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--primaria);
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease;
+}
+
+.boas-vindas {
+    font-size: 1.2rem;
+    font-style: italic;
+    border-left: 4px solid var(--secundaria);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.btn-principal, .btn-enviar {
+    display: inline-block;
+    background: var(--primaria);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicao);
+    margin-top: 1rem;
+}
+
+.alto-contraste .btn-principal, .alto-contraste .btn-enviar {
+    color: #000;
+}
+
+.btn-principal:hover, .btn-enviar:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Seção Escuta */
+.container-escuta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 1rem;
+    resize: vertical;
+    font-size: 1rem;
+}
+
+.orientacoes {
+    background: #f8fafc;
+    border-left: 4px solid var(--sucesso);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.alto-contraste .orientacoes {
+    background: #121212;
+}
+
+.orientacoes ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Seção Quiz */
+#container-quiz {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.alternativa {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg-principal);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transicao);
+    font-size: 1rem;
+    color: var(--texto);
+}
+
+.alternativa:hover {
+    border-color: var(--primaria);
+    background: #e0e7ff;
+}
+
+.alto-contraste .alternativa:hover {
+    background: #333;
+}
+
+.correta {
+    background: #d1fae5 !important;
+    border-color: var(--sucesso) !important;
+    color: #065f46;
+}
+
+.errada {
+    background: #fee2e2 !important;
+    border-color: #ef4444 !important;
+    color: #991b1b;
+}
+
+/* Seção Referências */
+.links-referencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card-ref {
+    background: var(--bg-card);
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--texto);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: var(--transicao);
+    text-align: center;
+}
+
+.card-ref i {
+    font-size: 2.5rem;
+    color: var(--secundaria);
+    margin-bottom: 1rem;
+}
+
+.card-ref:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-card);
+    margin-top: 4rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Elementos Utilitários/Diferenciais */
+.oculto { display: none; }
+
+#btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primaria);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade (Mobile) */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; padding: 1rem; }
+    .navbar nav ul { gap: 1rem; margin-top: 0.5rem; }
+    .hero { flex-direction: column; text-align: center; padding-top: 140px; }
+    .hero-content { max-width: 100%; }
+    section { padding: 80px 5% 40px 5%; }
+}

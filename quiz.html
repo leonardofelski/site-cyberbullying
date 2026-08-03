@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Digital | Conexão Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Conexão Segura</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="escuta.html">Portal de Escuta</a></li>
+                <li><a href="quiz.html" class="active">Quiz Digital</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+            </ul>
+        </nav>
+        <div class="acessibilidade">
+            <button id="btn-contraste" title="Alto Contraste"><i class="fa-solid fa-circle-half-stroke"></i></button>
+            <button id="btn-fonte" title="Aumentar Fonte"><i class="fa-solid fa-font"></i>+</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="quiz" class="secao-quiz">
+            <h2><i class="fa-solid fa-gamepad"></i> Quiz: Você está seguro na rede?</h2>
+            <p class="subtitulo">Teste seus conhecimentos sobre cyberbullying e segurança digital!</p>
+            
+            <div id="container-quiz" class="card">
+                <div id="pergunta-box"></div>
+                <div id="alternativas-box"></div>
+                <button id="btn-proximo" class="btn-principal oculto">Próxima Pergunta</button>
+            </div>
+            
+            <div id="resultado-quiz" class="card oculto">
+                <h3>Resultado do Quiz</h3>
+                <p id="placar"></p>
+                <button id="btn-reiniciar" class="btn-principal">Tentar Novamente</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Portal Conexão Segura. Criado com fins educativos.</p>
+    </footer>
+
+    <button id="btn-topo" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
