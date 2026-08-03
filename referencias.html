@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Referências | Conexão Segura</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referências - ConectaSeguro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<nav>
-  <div class="container nav-content">
-    <div class="logo">Conexão<span>Segura</span></div>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="escuta.html">Escuta</a></li>
-      <li><a href="referências.html">Referências</a></li>
-    </ul>
-  </div>
-</nav>
-
-<section class="section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Referências e fontes</h2>
-      <p>Conteúdos utilizados para conscientização sobre cyberbullying.</p>
+    <div class="accessibility-bar">
+        <button id="toggle-contrast" title="Alternar Modo Escuro"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+        <button id="increase-font" title="Aumentar Fonte"><i class="fa-solid fa-font"></i> A+</button>
+        <button id="decrease-font" title="Diminuir Fonte"><i class="fa-solid fa-font"></i> A-</button>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h3>SaferNet Brasil</h3>
-        <p>Orientações sobre segurança na internet e direitos digitais.</p>
-        <a href="https://www.safernet.org.br" target="_blank" class="btn btn-secondary" style="display:inline-block;margin-top:10px;">Acessar</a>
-      </div>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i> ConectaSeguro
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="escuta.html">Portal de Escuta</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <div class="card">
-        <h3>UNICEF Brasil</h3>
-        <p>Materiais educativos sobre violência online e proteção de crianças e adolescentes.</p>
-        <a href="https://www.unicef.org/brazil" target="_blank" class="btn btn-secondary" style="display:inline-block;margin-top:10px;">Acessar</a>
-      </div>
+    <main>
+        <section class="section-container">
+            <h2><i class="fa-solid fa-book-bookmark"></i> Referências e Informações Confiáveis</h2>
+            <p>Saiba mais sobre segurança digital e combate ao cyberbullying através de fontes oficiais:</p>
+            <ul class="ref-list">
+                <li>
+                    <strong>SaferNet Brasil:</strong> Instituição referência na promoção e defesa dos Direitos Humanos na Internet. 
+                    <a href="https://new.safernet.org.br/" target="_blank">Acessar site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </li>
+                <li>
+                    <strong>Gov.br - Guia de Segurança da Internet:</strong> Dicas oficiais sobre proteção de dados e convivência digital.
+                    <a href="https://www.gov.br/" target="_blank">Acessar site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </li>
+                <li>
+                    <strong>UNICEF Brasil:</strong> Informações e recursos sobre o combate ao bullying e discriminação na infância e adolescência.
+                    <a href="https://www.unicef.org/brazil/" target="_blank">Acessar site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </li>
+            </ul>
+        </section>
+    </main>
 
-      <div class="card">
-        <h3>Cartilha de Segurança</h3>
-        <p>Boas práticas de convivência e segurança no ambiente digital.</p>
-        <a href="https://cartilha.cert.br" target="_blank" class="btn btn-secondary" style="display:inline-block;margin-top:10px;">Acessar</a>
-      </div>
-    </div>
+    <button id="btn-top" title="Voltar ao Topo"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <div class="highlight">
-      <h2>Objetivo do projeto</h2>
-      <p>
-        Este site foi desenvolvido com fins educativos para promover o respeito,
-        a empatia e o uso responsável da internet, especialmente entre crianças e adolescentes.
-      </p>
-    </div>
-  </div>
-</section>
+    <footer>
+        <p>&copy; 2026 Portal de Apoio ao Estudante - Projeto Educacional sem fins lucrativos.</p>
+    </footer>
 
-<footer>
-  <div class="container">
-    <p>Projeto educativo • Conexão Segura</p>
-  </div>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

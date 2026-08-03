@@ -1,93 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espaço de Escuta | Conexão Segura</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Escuta - ConectaSeguro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<nav>
-  <div class="container nav-content">
-    <div class="logo">Conexão<span>Segura</span></div>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="escuta.html">Escuta</a></li>
-      <li><a href="referências.html">Referências</a></li>
-    </ul>
-  </div>
-</nav>
-
-<section class="section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Você não está sozinho</h2>
-      <p>Ser ouvido é o primeiro passo para enfrentar o problema.</p>
+    <div class="accessibility-bar">
+        <button id="toggle-contrast" title="Alternar Modo Escuro"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+        <button id="increase-font" title="Aumentar Fonte"><i class="fa-solid fa-font"></i> A+</button>
+        <button id="decrease-font" title="Diminuir Fonte"><i class="fa-solid fa-font"></i> A-</button>
     </div>
 
-    <div class="highlight">
-      <h2>Se algo aconteceu com você</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">✓</div>
-          <div>
-            <h4>Respire</h4>
-            <p>O que aconteceu não define quem você é.</p>
-          </div>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i> ConectaSeguro
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="escuta.html">Portal de Escuta</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="step">
-          <div class="step-number">✓</div>
-          <div>
-            <h4>Converse com alguém de confiança</h4>
-            <p>Pode ser um responsável, professor, amigo ou familiar.</p>
-          </div>
-        </div>
+    <main>
+        <section class="section-container">
+            <h2><i class="fa-solid fa-heart"></i> Portal de Escuta</h2>
+            <p>Este é um espaço seguro e confidencial. Escreva abaixo se estiver passando por algo difícil na internet ou na escola.</p>
 
-        <div class="step">
-          <div class="step-number">✓</div>
-          <div>
-            <h4>Bloqueie e denuncie</h4>
-            <p>Você tem direito à segurança digital.</p>
-          </div>
-        </div>
+            <div class="escuta-grid">
+                <div class="form-card">
+                    <h3>Espaço para Desabafo</h3>
+                    <form id="form-escuta">
+                        <div class="form-group">
+                            <label for="nome">Seu Nome ou Apelido (Opcional):</label>
+                            <input type="text" id="nome" placeholder="Anônimo">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Seu Desabafo:</label>
+                            <textarea id="mensagem" rows="5" placeholder="Escreva aqui o que está sentindo ou acontecendo..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Desabafo</button>
+                    </form>
+                    <div id="feedback-mensagem" class="feedback-box hidden"></div>
+                </div>
 
-        <div class="step">
-          <div class="step-number">✓</div>
-          <div>
-            <h4>Guarde as provas</h4>
-            <p>Prints podem ajudar caso seja necessário buscar ajuda formal.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+                <div class="support-info">
+                    <h3><i class="fa-solid fa-hand-holding-heart"></i> Você Não Está Só!</h3>
+                    <blockquote class="quote">
+                        "O respeito nas redes reflete o respeito na vida real. Gentileza gera gentileza."
+                    </blockquote>
+                    <h4>Onde buscar ajuda real:</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-user-tie"></i> Converse com um professor ou pedagogo.</li>
+                        <li><i class="fa-solid fa-school"></i> Procure a direção da escola.</li>
+                        <li><i class="fa-solid fa-people-roof"></i> Fale com seus pais ou responsável de confiança.</li>
+                        <li><i class="fa-solid fa-phone"></i> Ligue para o <strong>Disque 100</strong> (Direitos Humanos).</li>
+                        <li><i class="fa-solid fa-globe"></i> Acesse <a href="https://canaldeajuda.safernet.org.br/" target="_blank">SaferNet Brasil</a>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="grid" style="margin-top: 30px;">
-      <div class="card">
-        <h3>💙 Lembre-se</h3>
-        <p>Pedir ajuda é sinal de coragem, não de fraqueza.</p>
-      </div>
+    <button id="btn-top" title="Voltar ao Topo"><i class="fa-solid fa-arrow-up"></i></button>
 
-      <div class="card">
-        <h3>🛡️ Sua segurança importa</h3>
-        <p>Você pode controlar quem interage com você nas plataformas.</p>
-      </div>
+    <footer>
+        <p>&copy; 2026 Portal de Apoio ao Estudante - Projeto Educacional sem fins lucrativos.</p>
+    </footer>
 
-      <div class="card">
-        <h3>🌱 Isso pode melhorar</h3>
-        <p>Com apoio e acolhimento, situações difíceis podem ser superadas.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>Espaço de apoio e conscientização • Conexão Segura</p>
-  </div>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz | Conexão Segura</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo - ConectaSeguro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<nav>
-  <div class="container nav-content">
-    <div class="logo">Conexão<span>Segura</span></div>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="escuta.html">Escuta</a></li>
-      <li><a href="referências.html">Referências</a></li>
-    </ul>
-  </div>
-</nav>
-
-<section class="section">
-  <div class="container">
-    <div class="quiz-box">
-      <h2>Você sabe identificar o cyberbullying?</h2>
-      <p>Marque a alternativa correta.</p>
-
-      <form id="quizForm">
-        <h3>1. Compartilhar uma foto de alguém sem permissão pode ser cyberbullying?</h3>
-        <label><input type="radio" name="q1" value="certo"> Sim</label>
-        <label><input type="radio" name="q1" value="errado"> Não</label>
-
-        <h3>2. Curtir comentários ofensivos ajuda a diminuir o problema?</h3>
-        <label><input type="radio" name="q2" value="errado"> Sim</label>
-        <label><input type="radio" name="q2" value="certo"> Não</label>
-
-        <h3>3. O que é mais adequado fazer ao ver uma agressão online?</h3>
-        <label><input type="radio" name="q3" value="errado"> Compartilhar</label>
-        <label><input type="radio" name="q3" value="certo"> Apoiar e denunciar</label>
-
-        <button type="submit">Ver resultado</button>
-      </form>
-
-      <div id="resultado" class="resultado"></div>
+    <div class="accessibility-bar">
+        <button id="toggle-contrast" title="Alternar Modo Escuro"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+        <button id="increase-font" title="Aumentar Fonte"><i class="fa-solid fa-font"></i> A+</button>
+        <button id="decrease-font" title="Diminuir Fonte"><i class="fa-solid fa-font"></i> A-</button>
     </div>
-  </div>
-</section>
 
-<script src="script.js"></script>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i> ConectaSeguro
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="escuta.html">Portal de Escuta</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-container">
+            <h2><i class="fa-solid fa-circle-question"></i> Quiz de Segurança Digital</h2>
+            <p>Teste seus conhecimentos sobre Cyberbullying e boas práticas na rede!</p>
+
+            <div id="quiz-container" class="quiz-card">
+                </div>
+            <div id="quiz-result" class="quiz-result hidden"></div>
+        </section>
+    </main>
+
+    <button id="btn-top" title="Voltar ao Topo"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer>
+        <p>&copy; 2026 Portal de Apoio ao Estudante - Projeto Educacional sem fins lucrativos.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
